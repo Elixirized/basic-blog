@@ -1,8 +1,18 @@
 # SimpleBlog
 
-**NOTE** that the DEV port has been updated (as shown below) to 40**41**.
+- **NOTE** that the DEV port has been updated (as shown below) to 40**41**.
 
-### (Begin vanilla README content from Phoenix generator):
+## Overview
+
+This is a simple Elixir/Phoenix app for rendering blog content (written as Markdown files) using the Nimble Publisher Mix package.
+
+This was built using this (broken) tutorial: https://danschultzer.com/posts/welcome-to-my-blog
+
+Blog articles are in the `priv/posts` folder; there were two examples there at the time of the initial commit. 
+
+FYI, what is broken in the tutorial is that the `.eex` files in `simple_web/live/blog_live` need to have `.heex` extensions, not `.eex`.
+
+## Generic Intro Content
 
 To start your Phoenix server:
 
@@ -11,12 +21,16 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4041`](http://localhost:4041) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## TO DOs
 
-## Learn more
+If you launch this (generic, out-of-the-box) Phoenix app, you will immediately notice the the "container" is generic. We need to do <something> to make this content consistent with the header/footer styling of the main (host) site--starting with Elixirized.
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Note that if we keep this project site-independent, we can use this blog functionality on multiple sites, not just Elixirized. this implies a "TO DO" like:
+
+**[ ] TO DO**: Inherit the site-wide styling of the parent site hosting this blog functionality.
+
+### Article Styling
+
+The second thing you will notice is that the blog posts (articles) lack styling. Even the headers (<h> tags resulting from "#" makdow) lack styling.
+
+**[ ] TO DO**: Add CSS styling to headers, and add spacing between paragraphs so we don't have to manually add breaks (`<br/>`).
