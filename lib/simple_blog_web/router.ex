@@ -17,10 +17,11 @@ defmodule SimpleBlogWeb.Router do
   scope "/", SimpleBlogWeb do
     pipe_through :browser
 
-    live "/", BlogLive, :index
+    live "/", HomeLive, :index
+    live "/blog", BlogLive, :index
     live "/tags/:tag", BlogLive, :index
     live "/posts/:slug", BlogLive, :show
-    
+
   end
 
   # Other scopes may use custom stacks.
